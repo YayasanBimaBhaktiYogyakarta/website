@@ -1,0 +1,525 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    line-height: 1.6;
+    background-color: #f4f9ff;
+    color: #1d3557;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  img {
+    max-width: 100%;
+    display: block;
+    border-radius: 6px;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* =================== NAVBAR =================== */
+  .navbar {
+    background-color: #003f73;
+    color: #fff;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+  
+  .logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .logo {
+    width: 36px;
+  }
+  
+  .brand {
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+  }
+  
+  .nav-links a {
+    margin: 0 10px;
+    font-weight: 500;
+    color: #fff;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #fdd835;
+  }
+  
+  .contact-btn {
+    background: #fdd835;
+    color: #003f73;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  /* Default style (desktop) */
+.nav-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Hamburger button (mobile only) */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive menu default hidden with smooth slide */
+@media (max-width: 768px) {
+  .nav-links {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.0s ease-in-out;
+    flex-direction: column;
+    background-color: #003f73;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    max-height: 500px; /* atau cukup besar agar semua menu muat */
+    padding: 20px;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+  }
+
+  .navbar .container {
+    flex-wrap: wrap;
+    position: relative;
+  }
+}
+
+
+  
+  /* =================== HERO =================== */
+  .hero {
+    background-color: #0c5a93;
+    color: #fff;
+    padding: 80px 0;
+    text-align: left;
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 16px;
+    max-width: 500px;
+    margin-bottom: 30px;
+  }
+  
+  .btn-primary {
+    background-color: #003f73;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-block;
+  }
+  
+  .btn-primary.center {
+    display: block;
+    margin: 30px auto 0;
+    text-align: center;
+  }
+  
+  /* =================== SECTION =================== */
+  .section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #0c3d65;
+  }
+  
+  .subtitle-arab, .subtitle {
+    text-align: center;
+    margin: 8px auto;
+    font-size: 16px;
+    color: #333;
+    max-width: 700px;
+  }
+  
+  /* =================== LAYANAN & GRID =================== */
+  .grid {
+    display: grid;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  
+  .grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  
+  .card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+    text-align: center;
+  }
+  
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  }
+  
+  .card .icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .card h3 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  /* =================== PROGRAM =================== */
+  .program-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .img-placeholder {
+    height: 180px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .btn-outline {
+    padding: 8px 18px;
+    background: transparent;
+    color: #003f73;
+    border: 2px solid #003f73;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+  
+  .btn-outline:hover {
+    background-color: #003f73;
+    color: #fff;
+  }
+  
+  /* =================== BERITA =================== */
+  .news-item {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .news-item img {
+    height: 150px;
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .news-item p {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  /* =================== GALERI =================== */
+  .filter-tabs {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-tabs button {
+    background-color: transparent;
+    border: none;
+    padding: 8px 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #0c3d65;
+    border-radius: 6px;
+  }
+  
+  .filter-tabs .active {
+    background-color: #003f73;
+    color: #fff;
+  }
+  
+  .galeri-item {
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* =================== DONASI =================== */
+  .bank-card {
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  
+  /* =================== FOOTER =================== */
+  .footer {
+    background: #003f73;
+    color: #fff;
+    padding: 40px 20px 20px;
+  }
+  
+  .footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .footer a {
+    color: #fdd835;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  
+  .footer h3, .footer h4 {
+    margin-bottom: 10px;
+  }
+  
+  .copyright {
+    text-align: center;
+    font-size: 13px;
+    border-top: 1px solid #fff;
+    padding-top: 15px;
+  }
+  
+  /* =================== WHATSAPP FLOAT BUTTON =================== */
+  .wa-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .wa-float img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* =================== RESPONSIVE =================== */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 32px;
+    }
+  
+    .navbar .container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .news-item img {
+      height: 120px;
+    }
+  }
+  
+  /* ... tetap pakai bagian atas sebelumnya ... */
+
+.section {
+    padding: 60px 0;
+    min-height: 100vh; /* Full screen section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .program-card, .bank-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: none;
+    border-radius: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Let ringkasan and button stick to bottom */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .program-card:hover, .bank-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .program-card p,
+  .bank-card p {
+    margin-top: auto; /* Push content to bottom */
+    font-size: 14px;
+  }
+  
+  .program-card img,
+  .bank-card img {
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Hover untuk link */
+  .program-card a,
+  .bank-card a {
+    text-decoration: none;
+  }
+  
+  /* GALERI MODAL */
+  .galeri-item {
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .galeri-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Modal galeri */
+  #modal-gallery {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #modal-gallery img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px #000;
+  }
+  
+  #modal-gallery.active {
+    display: flex;
+  }
+  
+  /* Tombol tutup */
+  #modal-gallery::after {
+    content: "✕";
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* ... WhatsApp float tetap sama ... */
+  
+  @media (max-width: 768px) {
+    .program-card, .bank-card {
+      padding: 16px;
+    }
+  
+    .section {
+      padding: 40px 16px;
+    }
+  
+    .galeri-item {
+      height: 100px;
+    }
+  
+    #modal-gallery::after {
+      top: 10px;
+      right: 16px;
+      font-size: 28px;
+    }
+  }
+  
+
+  

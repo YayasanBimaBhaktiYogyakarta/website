@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yayasan Bima Bhakti</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar">
+  <div class="container">
+    <a href="index.html"><div class="logo-area">
+      <img src="assets/images.jpeg" class="logo" />
+      <span class="brand">YAYASAN BIMA BHAKTI</span>
+    </div></a>
+    
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <nav class="nav-links" id="navMenu">
+      <a href="tentangkami.html">Tentang Kami</a>
+      <a href="index.html">Layanan</a>
+      <a href="program.html">Program</a>
+      <a href="program.html">Donasi</a>
+      <a href="index.html">Blog/Berita</a>
+      <a href="https://wa.me/6281234567890" class="contact-btn">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+  <!-- PROGRAM -->
+  <section class="section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-right">PROGRAM dan KEGIATAN</h2>
+      <p class="subtitle-arab">قَالَ رَسُوْلُ اللهِ صَلَّى اللهُ عَلَيْهِ وَسَلَّمَ</p>
+      <p class="subtitle">"Jika manusia mati, maka terputuslah amalnya kecuali tiga perkara: (1) sedekah jariyah, (2) ilmu yang diambil manfaatnya, (3) anak shalih yang mendoakan." (HR. Muslim)</p>
+        <!-- konten -->
+      <div class="grid grid-4" data-aos="zoom-in">
+        <!-- Di dalam .grid -->
+      <div class="program-card">
+        <img src="assets/program/donasi pc.jpg" alt="Program 1" />
+         <p><strong>Pembangunan Kubah Masjid</strong></p>
+         <p>Biaya: <strong>Rp 12.000.000</strong></p>
+         <a href="https://wa.me/6281336736870" class="btn-outline">Donasi</a>
+      </div>
+      <div class="program-card">
+        <img src="assets/program/donasi pc.jpg" alt="Program 1" />
+         <p><strong>Pembangunan Kubah Masjid</strong></p>
+         <p>Biaya: <strong>Rp 12.000.000</strong></p>
+         <a href="https://wa.me/6281336736870" class="btn-outline">Donasi</a>
+      </div>
+      <div class="program-card">
+        <img src="assets/program/donasi pc.jpg" alt="Program 1" />
+         <p><strong>Pembangunan Kubah Masjid</strong></p>
+         <p>Biaya: <strong>Rp 12.000.000</strong></p>
+         <a href="https://wa.me/6281336736870" class="btn-outline">Donasi</a>
+      </div>
+      </div>
+
+      <div class="grid grid-4" data-aos="zoom-in">
+        <!-- Di dalam .grid -->
+      <div class="program-card">
+        <img src="assets/program/donasi pc.jpg" alt="Program 1" />
+         <p><strong>Pembangunan Kubah Masjid</strong></p>
+         <p>Biaya: <strong>Rp 12.000.000</strong></p>
+         <a href="https://wa.me/6281336736870" class="btn-outline">Donasi</a>
+      </div>
+      <div class="program-card">
+        <img src="assets/program/donasi pc.jpg" alt="Program 1" />
+         <p><strong>Pembangunan Kubah Masjid</strong></p>
+         <p>Biaya: <strong>Rp 12.000.000</strong></p>
+         <a href="https://wa.me/6281336736870" class="btn-outline">Donasi</a>
+      </div>
+      <div class="program-card">
+        <img src="assets/program/donasi pc.jpg" alt="Program 1" />
+         <p><strong>Pembangunan Kubah Masjid</strong></p>
+         <p>Biaya: <strong>Rp 12.000.000</strong></p>
+         <a href="https://wa.me/6281336736870" class="btn-outline">Donasi</a>
+      </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>YAYASAN BIMA BHAKTI</h3>
+        <p>Pondok Suruh RT 04, Ngemplak, Sleman</p>
+        <p>📞 0815-7819-9066 | 0813-3673-6870</p>
+        <p>📧 info.bimabhakti@gmail.com</p>
+      </div>
+      <div>
+        <h4>Tentang Kami</h4>
+        <p><a href="tentangkami.html">Sejarah</a></p>
+        <p><a href="tentangkami.html">Visi & Misi</a></p>
+      </div>
+      <div>
+        <h4>Layanan</h4>
+        <p><a href="">Panti Asuhan</a></p>
+        <p><a href="">Pondok Pesantren</a></p>
+        <p><a href="">Madrasah</a></p>
+      </div>
+      <div>
+        <h4>Ikuti Kami</h4>
+        <p>📱 Instagram, TikTok, YouTube</p>
+      </div>
+    </div>
+    <p class="copyright">© Copyright 2025, Yayasan Bima Bhakti</p>
+  </footer>
+
+  <!-- WHATSAPP FLOAT BUTTON -->
+  <a href="https://wa.me/6281336736870" class="wa-float" target="_blank">
+    <img src="assets/wa-icon.png" alt="Chat WhatsApp">
+  </a>
+
+  <!-- Galeri Modal -->
+<div id="modal-gallery"><img src="" alt="Preview"></div>
+
+<script>
+  const modal = document.getElementById("modal-gallery");
+  const modalImg = modal.querySelector("img");
+  const galeriItems = document.querySelectorAll(".galeri-item");
+
+  galeriItems.forEach(item => {
+    item.addEventListener("click", () => {
+      modal.classList.add("active");
+      modalImg.src = item.src;
+    });
+  });
+
+  modal.addEventListener("click", () => {
+    modal.classList.remove("active");
+    modalImg.src = "";
+  });
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    delay: 100,
+    once: true
+  });
+</script>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+  }
+</script>
+
+
+</body>
+</html>
